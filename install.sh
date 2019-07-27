@@ -37,10 +37,10 @@ git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/theme
 brew tap homebrew/cask-fonts
 brew cask install font-fira-code
 
-# get ~/Library/Preferences/com.googlecode.iterm2.plist from gist
-cd ~/Library/Preferences/
-curl -O https://gist.githubusercontent.com/GianDigia/df55b81fccd0c2c05b5ae7cd03abdf71/raw/78e38f517cce00416c092f2ae01a33486588d3d2/.zshrhttps://gist.githubusercontent.com/GianDigia/5c822a49da08e02516ac107d5504ab00/raw/8f03974f92797083487b630236ba740f10fc5013/com.googlecode.iterm2.plist
-cd
+# Import iTerm2 Preferences
+rm ~/Library/Preferences/com.googlecode.iterm2.plist
+cp com.googlecode.iterm2.plist ~/Library/Preferences/
+defaults read com.googlecode.iterm2.plist
 
 # Avoid "Last login" message in terminal
 touch ~/.hushlogin
