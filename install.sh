@@ -40,7 +40,6 @@ brew cask install font-fira-code
 # Import iTerm2 Preferences
 rm ~/Library/Preferences/com.googlecode.iterm2.plist
 cp com.googlecode.iterm2.plist ~/Library/Preferences/
-defaults read com.googlecode.iterm2.plist
 
 # Avoid "Last login" message in terminal
 touch ~/.hushlogin
@@ -128,6 +127,9 @@ defaults write com.apple.Siri StatusMenuVisible -bool false
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
 defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+
+# Overwrite cached preferences configuration
+killall cfprefsd
 
 # Restart like you pressed the GUI "Restart" button
 osascript -e 'tell app "System Events" to restart'
