@@ -14,6 +14,7 @@ defaults write com.google.Chrome AppleEnableSwipeNavigateWithScrolls -bool false
 brew cask install atom
 brew cask install gitkraken
 brew cask install rubymine
+brew cask install transmission
 
 # Install iTerm2 with zsh and Oh My Zsh
 brew cask install iterm2
