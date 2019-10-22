@@ -175,6 +175,8 @@ defaults write com.apple.systemuiserver menuExtras -array-add "/System/Library/C
 # Add battery percent in menu bar
 defaults write com.apple.menuextra.battery ShowPercent -string "YES"
 
+brew upgrade
+
 # Overwrite cached preferences configuration
 killall cfprefsd
 
