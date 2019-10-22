@@ -26,7 +26,13 @@ brew cask install atom
 brew cask install gitkraken
 brew cask install rubymine
 brew cask install goland
+brew cask install datagrip
 brew cask install transmission
+brew cask install vlc
+brew cask install docker
+brew cask install balenaetcher
+brew cask install visual-studio-code
+brew cask install ngrok
 
 # Install iTerm2 with zsh and Oh My Zsh
 brew cask install iterm2
