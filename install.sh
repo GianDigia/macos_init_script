@@ -25,6 +25,15 @@ gem install rmagick
 # Necessary to use postgres driver (postrges will run inside docker)
 brew install postgres
 
+# Use Sales Management project ruby/rails configuration
+brew install rbenv
+rbenv install 2.5.3
+rbenv rehash
+sudo gem install rails
+rbenv rehash
+gem update --system
+rbenv global 2.5.3
+
 # Dozer is a Bartender-like free app
 brew cask install dozer
 
