@@ -58,26 +58,25 @@ touch ~/.hushlogin
 
 # Install Apple App Store CLI
 brew install mas
-# Install Telegram from the App Store
-mas install 747648890
-# Install Paste from the App Store
-mas install 967805235
-# Install WhatsApp from the App Store
-mas install 1147396723
-# Install Todoist from the App Store
-mas install 585829637
-# Install The Unarchiver from the App Store
-mas install 425424353
-# Install Magnet from the App Store
-mas install 441258766
-# Install LastPass from the App Store
-mas install 926036361
-# Install NordVPN
-mas install 1116599239
-# Install Trello
-mas install 1278508951
-# Install Slack
-mas install 803453959
+
+# Install from the App Store:
+mas_ids=(747648890 # Telegram
+         967805235 # Paste
+         1147396723 # WhatsApp
+         585829637 # Todoist
+         425424353 # The Unarchiver
+         441258766 # Magnet
+         926036361 # LastPass
+         1116599239 # NordVPN
+         1278508951 # Trello
+         803453959 # Slack
+         937984704 # Amphetamine
+         1364502317 # Clockify
+         688211836 # EasyRes
+         )
+mas install "${mas_ids[@]}"
+
+
 
 # Import Dock configuration from gist
 curl -O https://gist.githubusercontent.com/GianDigia/0f31cedcb6eaa6b4183479ecadb55368/raw/aff393b594c972b671e4732f31090f4b7639218b/customdock.mobileconfig
