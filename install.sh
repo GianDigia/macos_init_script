@@ -4,6 +4,10 @@ sudo spctl --master-disable
 # Install Brew
 yes '' | ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
+# Install Heroku CLI
+brew tap heroku/brew && brew install heroku
+heroku login
+
 # Dozer is a Bartender-like free app
 brew cask install dozer
 
