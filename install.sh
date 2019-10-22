@@ -8,6 +8,13 @@ yes '' | ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/instal
 brew tap heroku/brew && brew install heroku
 heroku login
 
+brew install npm
+brew install node
+brew install go
+
+go get golang.org/x/tools/cmd/godoc
+go get github.com/golang/lint/golint
+
 # Dozer is a Bartender-like free app
 brew cask install dozer
 
@@ -18,6 +25,7 @@ defaults write com.google.Chrome AppleEnableSwipeNavigateWithScrolls -bool false
 brew cask install atom
 brew cask install gitkraken
 brew cask install rubymine
+brew cask install goland
 brew cask install transmission
 
 # Install iTerm2 with zsh and Oh My Zsh
