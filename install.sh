@@ -22,6 +22,9 @@ export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"
 brew link --force imagemagick@6
 gem install rmagick
 
+# Necessary to use postgres driver (postrges will run inside docker)
+brew install postgres
+
 # Dozer is a Bartender-like free app
 brew cask install dozer
 
