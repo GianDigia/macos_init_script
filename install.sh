@@ -50,6 +50,10 @@ brew cask install balenaetcher
 brew cask install visual-studio-code
 brew cask install ngrok
 
+brew install docker
+brew install git-flow
+brew install tig
+
 # Disable chrome touchpad "swipe nabigation"
 defaults write com.google.Chrome AppleEnableSwipeNavigateWithScrolls -bool false
 
