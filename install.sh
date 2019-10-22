@@ -26,9 +26,6 @@ gem install rmagick
 brew cask install dozer
 
 brew cask install google-chrome
-# Disable chrome touchpad "swipe nabigation"
-defaults write com.google.Chrome AppleEnableSwipeNavigateWithScrolls -bool false
-
 brew cask install atom
 brew cask install gitkraken
 brew cask install rubymine
@@ -40,6 +37,9 @@ brew cask install docker
 brew cask install balenaetcher
 brew cask install visual-studio-code
 brew cask install ngrok
+
+# Disable chrome touchpad "swipe nabigation"
+defaults write com.google.Chrome AppleEnableSwipeNavigateWithScrolls -bool false
 
 # Install iTerm2 with zsh and Oh My Zsh
 brew cask install iterm2
