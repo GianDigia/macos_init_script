@@ -15,6 +15,13 @@ brew install go
 go get golang.org/x/tools/cmd/godoc
 go get github.com/golang/lint/golint
 
+# Install utilities tools (Sales Management project purposes)
+brew install libdmtx
+brew install imagemagick@6
+export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"
+brew link --force imagemagick@6
+gem install rmagick
+
 # Dozer is a Bartender-like free app
 brew cask install dozer
 
