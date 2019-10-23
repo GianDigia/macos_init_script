@@ -9,6 +9,9 @@ sh $ZSH/tools/upgrade.sh
 # Upgrade App Store applications
 mas upgrade
 
+upgrade_oh_my_zsh
+git -C .oh-my-zsh pull
+
 read -p "Update MacOS? (y/n) " -n 1 -r
 echo
 if [[ $REPLY =~ ^[Yy]$ ]]
