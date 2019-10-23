@@ -68,7 +68,7 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 git clone https://github.com/floor114/zsh-apple-touchbar $ZSH_CUSTOM/plugins/zsh-apple-touchbar
 
 # Download my .zshrc gist
-cd; curl -O https://gist.githubusercontent.com/GianDigia/df55b81fccd0c2c05b5ae7cd03abdf71/raw/78e38f517cce00416c092f2ae01a33486588d3d2/.zshrc
+cd; curl -O https://gist.githubusercontent.com/GianDigia/df55b81fccd0c2c05b5ae7cd03abdf71/raw
 
 # set zsh as my shell
 chsh -s /bin/zsh
@@ -108,7 +108,7 @@ mas install "${mas_ids[@]}"
 
 
 # Import Dock configuration from gist
-curl -O https://gist.githubusercontent.com/GianDigia/0f31cedcb6eaa6b4183479ecadb55368/raw/aff393b594c972b671e4732f31090f4b7639218b/customdock.mobileconfig
+curl -O https://gist.githubusercontent.com/GianDigia/0f31cedcb6eaa6b4183479ecadb55368/raw
 profiles -I -F customdock.mobileconfig
 rm customdock.mobileconfig
 
