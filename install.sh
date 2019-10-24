@@ -49,6 +49,7 @@ brew cask install docker
 brew cask install balenaetcher
 brew cask install visual-studio-code
 brew cask install ngrok
+brew cask install postman
 
 brew install docker
 brew install git-flow
