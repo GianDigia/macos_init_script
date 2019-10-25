@@ -1,3 +1,6 @@
+export PATH="/usr/local/sbin:$PATH"
+export PATH="/usr/local/bin:$PATH"
+
 brew update
 brew upgrade
 brew cask upgrade --greedy
