@@ -1,4 +1,11 @@
 export ZSH="/Users/$USER/.oh-my-zsh"
+export PATH="/usr/local/sbin:$PATH"
+export SHELL_SESSION_HISTORY=0
+export PATH="$PATH:`pwd`/flutter/bin"
+export GOPATH="${HOME}/.go"
+export GOROOT="$(brew --prefix golang)/libexec"
+export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
+export PATH="/usr/local/opt/openssl/bin:$PATH"
 
 ZSH_THEME="powerlevel9k/powerlevel9k"
 CASE_SENSITIVE="true"
@@ -18,6 +25,7 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
+# POWERLEVEL9K THEME CONFIGURATION
 OS_ICON=$(echo "APPLE_ICON")
 POWERLEVEL9K_PROMPT_ADD_NEWLINE=false
 
@@ -46,29 +54,18 @@ POWERLEVEL9K_FOLDER_ICON=''
 
 HIST_STAMPS="dd/mm/yyyy"
 
-export SHELL_SESSION_HISTORY=0
-export PATH="$PATH:`pwd`/flutter/bin"
 
 # Aliases
 alias repo="cd /Users/$USER/Documents/repo/"
-
-export PATH="/usr/local/sbin:$PATH"
-
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-
 alias upgrade="sh /Users/giandigia/Documents/utilities/maintenance.sh"
 alias stop_all="sh /Users/giandigia/Documents/utilities/stop_all.sh"
 
-export GOPATH="${HOME}/.go"
-export GOROOT="$(brew --prefix golang)/libexec"
-export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
-# used to store the project secret key
+# used to store the sales_management_pix project secret key
 SMP_RC=.smp-key
 if [ -f "$SMP_RC" ]; then
   source $SMP_RC
 else
     echo "$SMP_RC does not exist"
 fi
-
-export PATH="/usr/local/opt/openssl/bin:$PATH"
