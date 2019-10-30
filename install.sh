@@ -22,8 +22,19 @@ export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"
 brew link --force imagemagick@6
 gem install rmagick
 
-# Necessary to use postgres driver (postrges will run inside docker)
+brew cask install docker
+brew install docker
+brew install mysql
+brew services start mysql
 brew install postgres
+
+docker run -d -p 5432:5432 --name postgres -e POSTGRES_PASSWORD=password postgres:alpine
+
+# Necessary to use postgres driver (postrges will run inside docker)
+createuser -h localhost -p 5432 postgres -s
+
+mysql --user="root" --password="" --execute="CREATE USER 'postgres'@'localhost' IDENTIFIED BY 'password';"
+mysql --user="root" --password="" --execute="GRANT ALL PRIVILEGES ON * . * TO 'postgres'@'localhost';"
 
 # Use Sales Management project ruby/rails configuration
 brew install rbenv
@@ -45,13 +56,11 @@ brew cask install goland
 brew cask install datagrip
 brew cask install transmission
 brew cask install vlc
-brew cask install docker
 brew cask install balenaetcher
 brew cask install visual-studio-code
 brew cask install ngrok
 brew cask install postman
 
-brew install docker
 brew install git-flow
 brew install tig
 
