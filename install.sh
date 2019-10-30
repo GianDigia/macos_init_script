@@ -69,7 +69,7 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 git clone https://github.com/floor114/zsh-apple-touchbar $ZSH_CUSTOM/plugins/zsh-apple-touchbar
 
 # Download my .zshrc gist
-cd; curl -O https://gist.githubusercontent.com/GianDigia/df55b81fccd0c2c05b5ae7cd03abdf71/raw
+cp conf_files/.zshrc ~/.zshrc
 
 # set zsh as my shell
 chsh -s /bin/zsh
@@ -81,7 +81,7 @@ brew cask install font-fira-code
 
 # Import iTerm2 Preferences
 rm ~/Library/Preferences/com.googlecode.iterm2.plist
-cp com.googlecode.iterm2.plist ~/Library/Preferences/
+cp conf_files/com.googlecode.iterm2.plist ~/Library/Preferences/
 
 # Avoid "Last login" message in terminal
 touch ~/.hushlogin
@@ -109,9 +109,7 @@ mas install "${mas_ids[@]}"
 
 
 # Import Dock configuration from gist
-curl -O https://gist.githubusercontent.com/GianDigia/0f31cedcb6eaa6b4183479ecadb55368/raw
-profiles -I -F customdock.mobileconfig
-rm customdock.mobileconfig
+profiles -I -F conf_files/customdock.mobileconfig
 
 # Hot corners
 #  0 : NOP
