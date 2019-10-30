@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block, everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 export ZSH="/Users/$USER/.oh-my-zsh"
 export PATH="/usr/local/sbin:$PATH"
 export SHELL_SESSION_HISTORY=0
@@ -7,7 +14,7 @@ export GOROOT="$(brew --prefix golang)/libexec"
 export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
 export PATH="/usr/local/opt/openssl/bin:$PATH"
 
-ZSH_THEME="powerlevel9k/powerlevel9k"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 CASE_SENSITIVE="true"
 ENABLE_CORRECTION="true"
 HIST_STAMPS="dd/mm/yyyy"
@@ -25,9 +32,6 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
-# POWERLEVEL9K THEME CONFIGURATION
-source .term_themes/theme_1
-
 # Aliases
 alias repo="cd /Users/$USER/Documents/repo/"
 alias upgrade="sh /Users/giandigia/Documents/utilities/maintenance.sh"
@@ -42,3 +46,6 @@ if [ -f "$SMP_RC" ]; then
 else
     echo "$SMP_RC does not exist"
 fi
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

@@ -79,12 +79,12 @@ git clone https://github.com/floor114/zsh-apple-touchbar $ZSH_CUSTOM/plugins/zsh
 
 # Download my .zshrc gist
 cp conf_files/.zshrc ~/.zshrc
-cp .term_themes/ ~/.term_themes/
 
 # set zsh as my shell
 chsh -s /bin/zsh
-# Install powerlevel9k
-git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
+# Install powerlevel10k
+git clone https://github.com/romkatv/powerlevel10k.git ~/.oh-my-zsh/custom/themes/powerlevel10k
+
 # Install font
 brew tap homebrew/cask-fonts
 brew cask install font-fira-code
