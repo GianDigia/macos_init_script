@@ -79,6 +79,7 @@ git clone https://github.com/floor114/zsh-apple-touchbar $ZSH_CUSTOM/plugins/zsh
 
 # Download my .zshrc gist
 cp conf_files/.zshrc ~/.zshrc
+cp .term_themes/ ~/.term_themes/
 
 # set zsh as my shell
 chsh -s /bin/zsh
