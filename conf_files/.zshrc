@@ -36,6 +36,8 @@ source $ZSH/oh-my-zsh.sh
 alias repo="cd /Users/$USER/Documents/repo/"
 alias upgrade="sh /Users/giandigia/Documents/utilities/maintenance.sh"
 alias stop_all="sh /Users/giandigia/Documents/utilities/stop_all.sh"
+alias ls="exa"
+alias cat="bat"
 
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
