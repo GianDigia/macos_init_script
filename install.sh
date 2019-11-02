@@ -170,8 +170,8 @@ defaults write com.apple.screensaver askForPasswordDelay -int 0
 # Disable the “Are you sure you want to open this application?” dialog
 defaults write com.apple.LaunchServices LSQuarantine -bool false
 
-# Allow applications downloaded from anywhere
-sudo spctl --master-disable
+# Set Current Folder as Default Search Scope
+defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
 
 # Turn on Firewall
 sudo defaults write /Library/Preferences/com.apple.alf globalstate -int 1
@@ -190,8 +190,6 @@ defaults write com.apple.systemuiserver menuExtras -array-add "/System/Library/C
 
 # Add battery percent in menu bar
 defaults write com.apple.menuextra.battery ShowPercent -string "YES"
-
-brew upgrade
 
 # Overwrite cached preferences configuration
 killall cfprefsd
