@@ -74,6 +74,9 @@ brew install bat
 # Disable chrome touchpad "swipe nabigation"
 defaults write com.google.Chrome AppleEnableSwipeNavigateWithScrolls -bool false
 
+# Uninstall Google Udpdate
+~/Library/Google/GoogleSoftwareUpdate/GoogleSoftwareUpdate.bundle/Contents/Resources/ksinstall --nuke
+
 # Install iTerm2 with zsh and Oh My Zsh
 brew cask install iterm2
 brew install zsh zsh-completions
