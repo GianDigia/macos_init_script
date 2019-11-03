@@ -128,20 +128,6 @@ mas install "${mas_ids[@]}"
 # Import Dock configuration from gist
 profiles -I -F conf_files/customdock.mobileconfig
 
-# Hot corners
-#  0 : NOP
-#  2 : Mission Control
-#  3 : Show application windows
-#  4 : Desktop
-#  5 : Start screen saver
-#  6 : Disable screen saver
-#  7 : Dashboard
-# 10 : Put display to sleep
-# 11 : Launchpad
-# 12 : Notification Center
-defaults write com.apple.dock wvous-bl-corner -int 11
-defaults write com.apple.dock wvous-tr-corner -int 4
-
 # Trigger "activate/deactivate full-screen" with CMD+RETURN
 plutil -insert NSUserKeyEquivalents -xml "<dict><key>Attiva modalità a tutto schermo</key><string>@↩</string><key>Disattiva modalità a tutto schermo</key><string>@↩</string></dict>" ~/Library/Preferences/.GlobalPreferences.plist
 
@@ -156,12 +142,6 @@ defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 2
 
 # Scroll bar visibility
 defaults write NSGlobalDomain AppleShowScrollBars -string "WhenScrolling"
-
-# Automatically rearrange Spaces based on most recent use
-defaults write com.apple.dock mru-spaces -bool false
-
-# Hide recent applications from Dock
-defaults write com.apple.dock show-recents false
 
 # Require password immediately after sleep or screen saver begins
 defaults write com.apple.screensaver askForPassword -bool true
@@ -190,6 +170,9 @@ defaults write com.apple.systemuiserver menuExtras -array-add "/System/Library/C
 
 # Add battery percent in menu bar
 defaults write com.apple.menuextra.battery ShowPercent -string "YES"
+
+# Restore Saved Dock Preferences
+cp conf_files/com.apple.dock.plist ~/Library/Preferences/ && killall Dock
 
 # Overwrite cached preferences configuration
 killall cfprefsd
