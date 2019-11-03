@@ -62,9 +62,6 @@ brew cask install visual-studio-code
 brew cask install ngrok
 brew cask install postman
 
-brew tap cjbassi/gotop
-brew install gotop
-
 brew install git-flow
 brew install tig
 brew install tree
