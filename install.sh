@@ -8,8 +8,15 @@ yes '' | ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/instal
 brew tap heroku/brew && brew install heroku
 heroku login
 
-brew install npm
-brew install node
+# Install nodenv, Node and npm
+brew install nodenv
+nodenv install 12.13.0
+nodenv global 12.13.0
+nodenv rehash
+npm install -g npm
+
+brew install yarn
+
 brew install go
 
 go get golang.org/x/tools/cmd/godoc
@@ -39,11 +46,9 @@ mysql --user="root" --password="" --execute="GRANT ALL PRIVILEGES ON * . * TO 'p
 # Use Sales Management project ruby/rails configuration
 brew install rbenv
 rbenv install 2.5.3
-rbenv rehash
+rbenv global 2.5.3
 sudo gem install rails
 rbenv rehash
-gem update --system
-rbenv global 2.5.3
 
 # Dozer is a Bartender-like free app
 brew cask install dozer
@@ -52,6 +57,7 @@ brew cask install google-chrome
 brew cask install atom
 brew cask install gitkraken
 brew cask install rubymine
+brew cask install webstorm
 brew cask install goland
 brew cask install datagrip
 brew cask install transmission
@@ -61,12 +67,19 @@ brew cask install balenaetcher
 brew cask install visual-studio-code
 brew cask install ngrok
 brew cask install postman
+brew cask install insomnia
 
+brew install bash
 brew install git-flow
 brew install tig
 brew install tree
 brew install exa
 brew install bat
+brew install fzf
+brew install tldr
+brew install composer
+brew install php@7.3
+brew link php@7.3 --force
 
 # Disable chrome touchpad "swipe nabigation"
 defaults write com.google.Chrome AppleEnableSwipeNavigateWithScrolls -bool false
@@ -102,6 +115,9 @@ cp conf_files/com.googlecode.iterm2.plist ~/Library/Preferences/
 
 # Avoid "Last login" message in terminal
 touch ~/.hushlogin
+
+# Install Lumen
+composer global require "laravel/lumen-installer"
 
 # Install Apple App Store CLI
 brew install mas
