@@ -1,4 +1,3 @@
-
 # Souce the "Welcome" script
 #ruby .welcome.rb
 
